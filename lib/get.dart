@@ -1,23 +1,11 @@
+/// GetX is an extra-light and powerful multiplatform framework.
+/// It combines high performance state management, intelligent dependency
+/// injection, and route management in a quick and practical way.
 library get;
 
-export 'src/routes/default_route.dart';
-export 'src/get_main.dart';
-export 'src/snackbar/snack.dart';
-export 'src/bottomsheet/bottomsheet.dart';
-export 'src/snackbar/snack_route.dart';
-export 'src/state/get_state.dart';
-export 'src/state/mixin_state.dart';
-export 'src/rx/rx_interface.dart';
-export 'src/rx/rx_impl.dart';
-export 'src/rx/rx_event.dart';
-export 'src/rx/rx_obx.dart';
-export 'src/rx/rx_getbuilder.dart';
-export 'src/root/root_widget.dart';
-export 'src/root/smart_management.dart';
-export 'src/routes/default_route.dart';
-export 'src/routes/get_route.dart';
-export 'src/routes/bindings_interface.dart';
-export 'src/routes/observers/route_observer.dart';
-export 'src/routes/transitions_type.dart';
-export 'src/platform/platform.dart';
-export 'src/extension_instance.dart';
+export 'get_core/get_core.dart';
+export 'get_instance/get_instance.dart';
+export 'get_navigation/get_navigation.dart';
+export 'get_rx/get_rx.dart';
+export 'get_state_manager/get_state_manager.dart';
+export 'get_utils/get_utils.dart';

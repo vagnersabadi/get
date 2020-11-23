@@ -1,17 +1,25 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_state/home/views/country_view.dart';
-import 'home/views/details_view.dart';
-import 'home/views/home_view.dart';
+import 'routes/app_pages.dart';
+import 'shared/logger/logger_utils.dart';
 
 void main() {
-  runApp(GetMaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: '/',
-    namedRoutes: {
-      '/': GetRoute(page: HomePage()),
-      '/country': GetRoute(page: CountryPage()),
-      '/details': GetRoute(page: DetailsPage()),
-    },
-  ));
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      enableLog: true,
+      logWriterCallback: Logger.write,
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
+    );
+  }
 }
